@@ -1,0 +1,67 @@
+<!DOCTYPE html>    
+<html>    
+  <head>  <!-- www.techstrikers.com -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">    
+    <meta charset="utf-8">    
+    <title>Infowindow on Circle Click on Google Map</title>    
+    <style>    
+      html, body {    
+        height: 100%;    
+        margin: 0;    
+        padding: 0;    
+      }    
+      #map {    
+        height: 99%;  
+        width:99%  
+      }    
+    </style>    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>    
+        <script> 
+ var contents = '<div id="content">'+    
+  '<div id="siteNotice">'+    
+  '</div>'+    
+  '<h3 id="firstHeading" class="firstHeading"><a href="#">Budi <img src="pin.png" width="15px"></a></h3>'+    
+  '</div>';    
+          
+// First, create an object containing LatLng and population for each city.    
+var citymap = {lat:21.002471054356725, lng:79.12353515625};  
+    
+function initMap() {    
+  var lat_lng = {lat: 22.08672, lng: 79.42444};     
+  var map = new google.maps.Map(document.getElementById('map'), {    
+    zoom: 6,    
+    center: lat_lng,    
+    mapTypeId: google.maps.MapTypeId.TERRAIN    
+  });    
+   
+  var infowindow = new google.maps.InfoWindow({    
+    content: contents    
+  });
+  
+   
+    // Add the circle for this city to the map.    
+    var cityCircle = new google.maps.Circle({    
+      strokeColor: '#FF0000',    
+      strokeOpacity: 0.8,    
+      strokeWeight: 2,    
+      fillColor: '#FF0000',    
+      fillOpacity: 0.35,    
+      map: map,    
+      center: lat_lng,    
+      radius: 199999.45454,  
+      draggable:false  
+    });
+					
+					
+	google.maps.event.addListener(cityCircle, 'click', function(ev){
+    infowindow.setPosition(cityCircle.getCenter());
+    infowindow.open(map);
+});
+   
+}    
+    </script>    
+  </head>    
+  <body>    
+    <div id="map"></div>    
+  </body>    
+</html>

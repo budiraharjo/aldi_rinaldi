@@ -1,0 +1,43 @@
+	/*
+	body 																	{ background:#131314 url('../img/grey/background_top.png') repeat-x top center; }
+	*/
+	body 
+	{ 
+	
+	background:#131314 url('../img/Wind.jpg') repeat-x top center;
+	background-attachment: fixed; }
+	body>div.full 															{ background:url('../img/grey/back-footer-bottom.png') repeat-x bottom left; }
+	
+	.section .arrow 															{ background:url('../img/grey/button_arrow_section_grey.png') no-repeat right -14px;line-height:20px;padding-right:18px;text-decoration:none;color:#000;font-weight:bold;display:block;float:left;font-size:12px;  }
+	.section .arrow:link 													{ }
+	.section .arrow:visited													{ }
+	.section .arrow:hover													{ color:#858585;background-position:right 2px; }
+		
+	.container .left 														{ float:left;display:block; 	}
+	.container .right ,
+	.container .section .right 												{ float:right;display:block; 	}
+
+	.separator 																{ color:#fff;background: url('../img/grey/background_separator.png') no-repeat left center; }
+
+	.container h1, h2, h3, h4, h1 a, h2 a, h3 a, h4 a 							{ color:#000; }	
+	
+	#content ul.commentsList h4,												
+	#menu ul.commentsList h4													{ color:#3a3a3a; }
+	
+	h2.title 																{ color:#000; } 
+	h2.title span															{ color:#000; }
+	
+	.menu li a 																{ color:#EFEFEF; } 
+	.menu li a:link 															{ } 
+	.menu li a:visited														{ } 
+	.menu li a:hover															{ color:#A8A8A8; } 
+	.menu li a:hover	span														{ color:#A8A8A8; } 
+	.menu li a span															{ color:#A8A8A8; } 
+	
+	.menu li.selected a 														{ color:#A8A8A8; } 
+	.menu li.selected a span													{ color:#878787; } 
+	
+	#menu span.tags a:link 													{}
+	#menu span.tags a:visited 												{}
+	#menu span.tags a:hover 													{ color:#343434;}
+	#menu span.tags a:active													{ color:#000; }
